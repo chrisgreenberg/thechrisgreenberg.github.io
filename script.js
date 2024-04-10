@@ -15,16 +15,17 @@ document.getElementById('input-form').onsubmit = function(event) {
 };
 
 document.addEventListener('mousemove', (e) => {
-    const screenWidth = window.innerWidth;
-    const screenHeight = window.innerHeight;
-    
-    // Get the mouse position as a percentage of the screen width/height
-    const mouseXPercentage = Math.round((e.pageX / screenWidth) * 100);
-    const mouseYPercentage = Math.round((e.pageY / screenHeight) * 100);
+    const radius = 150; // Radius of the circle around the cursor
 
-    // Use the mouse position to adjust the background color
-    document.body.style.backgroundColor = `rgb(${mouseXPercentage}%, ${mouseYPercentage}%, 50%)`;
+    // Calculate the gradient's position from the mouse coordinates
+    const x = e.clientX;
+    const y = e.clientY;
+
+    // Set the background to be a radial gradient centered at (x, y)
+    document.body.style.backgroundImage = 
+        `radial-gradient(circle at ${x}px ${y}px, rgba(51, 255, 51, 0.8) 0%, rgba(51, 255, 51, 0) ${radius}px)`;
 });
+
 
 
 
