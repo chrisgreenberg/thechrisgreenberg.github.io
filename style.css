@@ -1,35 +1,81 @@
 body, html {
     height: 100%;
     margin: 0;
-    background-color: black;
-    color: limegreen;
-    font-family: 'Courier New', monospace;
+    background-color: #000; /* Black background for terminal feel */
+    color: #33FF33; /* Classic green on black terminal text */
+    font-family: 'VT323', monospace; /* VT323 is a good retro terminal font */
+    font-size: 20px; /* Adjust based on your preference */
+    background-image: radial-gradient(white 0.5px, transparent 0.5px),
+                      radial-gradient(white 0.5px, transparent 0.5px),
+                      radial-gradient(white 0.5px, transparent 0.5px);
+    background-size: 10px 10px, 50px 50px, 100px 100px;
+    background-position: 0 0, center, center;
+}
+
+
+
+header {
+    text-align: left;
+    margin: 0;
+    padding: 1rem;
+    color: #fff;
+}
+
+header pre, header p {
+    font-size: 1em;
+    white-space: pre-wrap; /* Ensures pre text wraps */
+    word-wrap: break-word;
+}
+
+main {
+    padding: 1rem;
 }
 
 #terminal {
-    padding: 20px;
+    background-color: #000; /* Black background */
+    color: #33FF33; /* Classic green text color */
+    padding: 1rem;
+    border: none;
 }
 
-#input-form {
-    margin: 0;
+#output {
+    margin-bottom: 0.5rem;
+}
+
+#input-line {
+    display: flex;
+    align-items: center;
+}
+
+.prompt {
+    color: #33FF33; /* Classic green color for the prompt */
+    margin-right: 4px; /* Space between prompt and command input */
+}
+
+#input-form, #input {
+    flex-grow: 1;
+    display: flex;
 }
 
 #input {
-    width: 100%;
-    background-color: black;
-    color: limegreen;
-    border: none;
-    padding: 0;
-    margin: 0;
-    font-family: 'Courier New', monospace;
-    font-size: 16px;
+    width: 100%; /* Full width to continue on the same line */
+    background-color: #000; /* Black background */
+    color: #33FF33; /* Classic green text color */
+    border: none; /* Removes the border */
+    padding: 0.25rem; /* Slightly pad the text input */
+}
+
+
+#input::placeholder {
+    color: #555; /* A lighter color for placeholder text */
 }
 
 #input:focus {
     outline: none;
+    border-color: #33FF33; /* Classic green border when focused */
 }
 
-#output {
-    white-space: pre-wrap;
-    word-wrap: break-word;
+/* Style for the divs being appended to the output */
+#output div {
+    white-space: pre; /* Ensures spacing and formatting are preserved */
 }

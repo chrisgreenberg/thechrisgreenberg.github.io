@@ -3,16 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Terminal</title>
+    <title>Terminal-style Webpage</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="terminal">
-        <div id="output"></div>
-        <form id="input-form">
-            <input type="text" id="input" autocomplete="off" placeholder="Type command..." autofocus />
-        </form>
-    </div>
+    <header>
+        <pre>
+
+    _   /\.  ,  /\           .
+    *  / \_ *  / \_      _  *        *   /\'__        *
+      /    \  /    \,   ((        .    _/  /  \  *'.      Welcome to my little corner of cyberspace,
+ .   /\/\  /\/ :' __ \_  `          _^/  ^/    `--.       where the stars are bright, and the bandwidth is infinite.
+    /    \/  \  _/  \-'\      *    /.' ^_   \_   .'\  *   It can get lonely out here all by myself;
+  /\  .-   `. \/     \ /==~=-=~=-=-;.  _/ \ -. `_/   \    so use the command <span class="command">help</span> to navigate my cybersphere.
+ /  `-.__ ^   / .-'.--\ =-=~_=-=~=^/  _ `--./ .-'  `-
+/        `.  / /       `.~-^=-=~=^=.-'      '-._ `._
+
+        </pre>
+        <p>In the realm of web design, priorities typically lie with user-friendliness, SEO, and polished interfaces. But not in my corner! Welcome to a place where I choose creativity over convention.</p>
+    </header>
+    <main>
+        <div id="terminal">
+            <div id="output"></div>
+            <div id="input-line" class="input-line">
+                <span class="prompt">user@cyberspace:~$</span>
+                <form id="input-form">
+                    <input type="text" id="input" autocomplete="off" placeholder="Type command..." autofocus />
+                </form>
+            </div>
+        </div>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
