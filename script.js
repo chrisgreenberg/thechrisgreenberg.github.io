@@ -62,6 +62,10 @@ function executeCommand(command, output) {
             responseLine.innerHTML = "Information on detector technology and my contributions.<br>";
             output.appendChild(responseLine);
             break;
+        case 'David':
+            responseLine.innerHTML = "Salooope.<br>";
+            output.appendChild(responseLine);
+            break;
         default:
             responseLine.innerHTML = `Command "${command}" not recognized. Try 'help' for a list of commands.<br>`;
             output.appendChild(responseLine);
